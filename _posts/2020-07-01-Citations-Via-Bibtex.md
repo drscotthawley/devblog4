@@ -11,8 +11,7 @@ search_exclude: false
 
 ## How to Cite 
 
-Since this is my post, I'll take the liberty of citing my own papers ;-), namely the first SignalTrain paper {% cite signaltrain %} and the second one by Billy Mitchell {% cite billy_signaltrain2 %}.  Instead of using the LaTeX format of {% raw %}`\cite{ <whatever> }`{% endraw %}, we use the Liquid format of {% raw  %}`{% cite <whatever> %}`{% endraw %}.
-
+Since this is my own post, I'll take the liberty of citing my own papers ;-), namely the first SignalTrain paper {% cite signaltrain %} and the second one by Billy Mitchell {% cite billy_signaltrain2 %}.  Instead of using the LaTeX format of {% raw %}`\cite{ <whatever> }`{% endraw %}, we use the Liquid format of {% raw  %}`{% cite <whatever> %}`{% endraw %}.
 
 
 Hopefully what just happened above is that two citation markings were generated, and these then point to the References section at the end of this post where the full citations are printed out, using the citation format of my choice.
