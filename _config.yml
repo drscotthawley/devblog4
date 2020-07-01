@@ -76,6 +76,10 @@ default_badges:
 html_escape:
   description: false
 
+# options for jekyll-scholar, e.g. change citation style
+scholar:
+  style: physical-review-d  
+
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
 theme: minima
