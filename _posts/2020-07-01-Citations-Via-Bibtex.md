@@ -54,7 +54,7 @@ At the end of your post, you signal the creation of the list of references secti
 ## Enabling Jekyll-Scholar
 
 
-To enable jekyll-scholar, Hamel says we don't need to do anything installation-wise, so I hope that all I need to do is make the following two changes 
+To enable jekyll-scholar, all we need to do is make the following two changes, and perhaps a third.  
 
 1. In `_config.yml`, add "` - jekyll-scholar`" to the list of `plugins:`.
 
