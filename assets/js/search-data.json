@@ -78,10 +78,7 @@
   
 
   
-  
-
-  
-      ,"page10": {
+      ,"page9": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://drscotthawley.github.io/devblog4/robots.txt",
@@ -89,6 +86,9 @@
           "date": ""
       }
       
+  
+
+  
   
 
 }
