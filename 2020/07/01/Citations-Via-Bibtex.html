@@ -115,7 +115,7 @@ window.onload = wrap_img;
 <h2 id="drawing-from-the-bibliography">
 <a class="anchor" href="#drawing-from-the-bibliography" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drawing from the Bibliography</h2>
 
-<p>To get the full citation info, we will draw from the sample BibTex file <a href="bibliography.bib">bibliography.bib</a>, which looks like this:</p>
+<p>To get the full citation info, we will draw from the sample BibTex file <a href="references.bib">references.bib</a>, which lives in a new directory we created called <code class="highlighter-rouge">_bibliography/</code>, and looks like this:</p>
 
 <pre><code class="language-bibtex">@conference{signaltrain,
   title = {Profiling Audio Compressors with Deep Neural Networks},
@@ -123,7 +123,6 @@ window.onload = wrap_img;
   booktitle = {Audio Engineering Society Convention 147},
   month = {Oct},
   year = {2019},
-  url = {http://www.aes.org/e-lib/browse.cfm?elib=20595}
 }               
 
 @article{billy_signaltrain2, 
@@ -132,40 +131,39 @@ window.onload = wrap_img;
   journal={ArXiv},  
   year={2020},
   volume={abs/2006.05584} 
-  url = {https://arxiv.org/abs/2006.05584}
 } 
 </code></pre>
 
-<p><strong>NOTE #1:</strong> You might get the impression from the jekyll-scholar docs that you can name this file anything you want.  Good luck with that!  I started this blog entry using the file <code class="highlighter-rouge">references.bib</code>.  The problem is that the Liquid tag you need (see next section) refers to <code class="highlighter-rouge">bibliography</code>.</p>
+<p><strong>NOTE:</strong> jekyll-scholar hates the <code class="highlighter-rouge">url</code>, <code class="highlighter-rouge">howpublished</code> and <code class="highlighter-rouge">note</code> BibTeX fields.  Not only will it not recognize it, it will throw and error and abort the build if any of these are encountered.</p>
 
-<p><strong>NOTE #2:</strong> jekyll-scholar hates the <code class="highlighter-rouge">url</code> BibTeX tag.  Not will it not recognize it, it will throw and error and fail if the <code class="highlighter-rouge">url</code> tag is encountered! ??</p>
-
-<h2 id="enabling-jekyll-scholar">
-<a class="anchor" href="#enabling-jekyll-scholar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enabling Jekyll-Scholar</h2>
-
-<p>Currently <code class="highlighter-rouge">bibliography.bib</code> lives in the <code class="highlighter-rouge">_posts/</code> directory, but maybe there’s a better place to store it.  <a href="https://github.com/inukshuk/jekyll-scholar">The instructions for jekyll-scholar</a> say that it scans for any <code class="highlighter-rouge">.bib</code> file anywhere in the blog, so this may be more a matter of establishing a convention.   <a href="https://forums.fast.ai/t/how-to-include-citation-in-nbdev-exported-html/62462/8?u=drscotthawley">User rahuketu86 suggested</a> creating a <code class="highlighter-rouge">_bibliography</code> directory and putting the references there.</p>
-
-<p>The .bib file will then get converted to a <code class="highlighter-rouge">.html</code> file, so in my case it’ll be <code class="highlighter-rouge">bibliography.html</code>, and this can then be imported via a Liquid tag:</p>
+<p>At the end of your post, you signal the creation of the list of references section by using the Liquid tag</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">bibliography</span><span class="w"> </span><span class="o">--</span>cited<span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
-<p>…so I’ll put that at the very bottom of this file.   Currently that’ll generate a Liquid Syntax Error, <code class="highlighter-rouge">Unknown tag 'references'</code>, because we haven’t enabled jekyll-scholar yet.   The <code class="highlighter-rouge">--cited</code> means that it’ll only include those reference that are actually used in your post – no need to include hundreds of references from your BibTeX database that aren’t used!</p>
+<p>…so I’ll put that at the very bottom of this file.  (Currently that’ll generate an error, because we haven’t enabled jekyll-scholar yet, but we’ll do that below.)   The <code class="highlighter-rouge">--cited</code> means that it’ll only include those reference that are actually used in your post – no need to include hundreds of references from your BibTeX database that aren’t used!</p>
 
-<p>To enable jekyll-scholar, Hamel says we don’t need to do anything installation-wise, so I hope that all I need to do is make the following two changes in <code class="highlighter-rouge">_config.yml</code>:</p>
+<h2 id="enabling-jekyll-scholar">
+<a class="anchor" href="#enabling-jekyll-scholar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enabling Jekyll-Scholar</h2>
+
+<p>To enable jekyll-scholar, Hamel says we don’t need to do anything installation-wise, so I hope that all I need to do is make the following two changes</p>
 
 <ol>
   <li>
-    <p>Add “<code class="highlighter-rouge"> - jekyll-scholar</code>” to the list of <code class="highlighter-rouge">plugins:</code>.</p>
+    <p>In <code class="highlighter-rouge">_config.yml</code>, add “<code class="highlighter-rouge"> - jekyll-scholar</code>” to the list of <code class="highlighter-rouge">plugins:</code>.</p>
   </li>
   <li>
-    <p>Elsewhere in the file, specify a citation format e.g.,</p>
+    <p>Edit the <code class="highlighter-rouge">Gemfile</code> to include <code class="highlighter-rouge">gem 'jekyll-scholar'</code> where the other plugins are listed.</p>
+  </li>
+  <li>
+    <p>Optional: The defaut citation format is “apa”.  If you want to change that, you can specify a different <a href="https://citationstyles.org/">CSL</a> file, only without the .csl.  In my case, I found the file <code class="highlighter-rouge">physical-review-d.csl</code>, copied into my main blog directory, and then edited the <code class="highlighter-rouge">_config.yml</code> file to read</p>
   </li>
 </ol>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">scholar</span><span class="pi">:</span>
-  <span class="na">style</span><span class="pi">:</span> <span class="s">mla</span>
+  <span class="na">style</span><span class="pi">:</span> <span class="s">physical-review-d</span>
 </code></pre></div></div>
+<p>…in order to the citation style you see here.</p>
 
 <h1 id="references">
 <a class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h1>

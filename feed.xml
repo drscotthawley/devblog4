@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://drscotthawley.github.io/devblog4/feed.xml" rel="self" type="application/atom+xml" /><link href="https://drscotthawley.github.io/devblog4/" rel="alternate" type="text/html" /><updated>2020-07-01T17:41:56-05:00</updated><id>https://drscotthawley.github.io/devblog4/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Citations in Fastpages via BibTex and jekyll-scholar</title><link href="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html" rel="alternate" type="text/html" title="Citations in Fastpages via BibTex and jekyll-scholar" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex</id><content type="html" xml:base="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html">&lt;h2 id=&quot;how-to-cite&quot;&gt;How to Cite&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://drscotthawley.github.io/devblog4/feed.xml" rel="self" type="application/atom+xml" /><link href="https://drscotthawley.github.io/devblog4/" rel="alternate" type="text/html" /><updated>2020-07-01T17:53:37-05:00</updated><id>https://drscotthawley.github.io/devblog4/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Citations in Fastpages via BibTex and jekyll-scholar</title><link href="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html" rel="alternate" type="text/html" title="Citations in Fastpages via BibTex and jekyll-scholar" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex</id><content type="html" xml:base="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html">&lt;h2 id=&quot;how-to-cite&quot;&gt;How to Cite&lt;/h2&gt;
 
 &lt;p&gt;Since this is my post, I’ll take the liberty of citing my own papers ;-), namely the first SignalTrain paper &lt;a class=&quot;citation&quot; href=&quot;#signaltrain&quot;&gt;(Hawley et al., 2019)&lt;/a&gt; and the second one by Billy Mitchell &lt;a class=&quot;citation&quot; href=&quot;#billy_signaltrain2&quot;&gt;(Mitchell &amp;amp; Hawley, 2020)&lt;/a&gt;.  Instead of using the LaTeX format of &lt;code class=&quot;highlighter-rouge&quot;&gt;\cite{ &amp;lt;whatever&amp;gt; }&lt;/code&gt;, we use the Liquid format of &lt;code class=&quot;highlighter-rouge&quot;&gt;{% cite &amp;lt;whatever&amp;gt; %}&lt;/code&gt;.&lt;/p&gt;
 
@@ -6,7 +6,7 @@
 
 &lt;h2 id=&quot;drawing-from-the-bibliography&quot;&gt;Drawing from the Bibliography&lt;/h2&gt;
 
-&lt;p&gt;To get the full citation info, we will draw from the sample BibTex file &lt;a href=&quot;bibliography.bib&quot;&gt;bibliography.bib&lt;/a&gt;, which looks like this:&lt;/p&gt;
+&lt;p&gt;To get the full citation info, we will draw from the sample BibTex file &lt;a href=&quot;references.bib&quot;&gt;references.bib&lt;/a&gt;, which lives in a new directory we created called &lt;code class=&quot;highlighter-rouge&quot;&gt;_bibliography/&lt;/code&gt;, and looks like this:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-bibtex&quot;&gt;@conference{signaltrain,
   title = {Profiling Audio Compressors with Deep Neural Networks},
@@ -14,7 +14,6 @@
   booktitle = {Audio Engineering Society Convention 147},
   month = {Oct},
   year = {2019},
-  url = {http://www.aes.org/e-lib/browse.cfm?elib=20595}
 }               
 
 @article{billy_signaltrain2, 
@@ -23,39 +22,38 @@
   journal={ArXiv},  
   year={2020},
   volume={abs/2006.05584} 
-  url = {https://arxiv.org/abs/2006.05584}
 } 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;NOTE #1:&lt;/strong&gt; You might get the impression from the jekyll-scholar docs that you can name this file anything you want.  Good luck with that!  I started this blog entry using the file &lt;code class=&quot;highlighter-rouge&quot;&gt;references.bib&lt;/code&gt;.  The problem is that the Liquid tag you need (see next section) refers to &lt;code class=&quot;highlighter-rouge&quot;&gt;bibliography&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; jekyll-scholar hates the &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;howpublished&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;note&lt;/code&gt; BibTeX fields.  Not only will it not recognize it, it will throw and error and abort the build if any of these are encountered.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;NOTE #2:&lt;/strong&gt; jekyll-scholar hates the &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; BibTeX tag.  Not will it not recognize it, it will throw and error and fail if the &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; tag is encountered! ??&lt;/p&gt;
-
-&lt;h2 id=&quot;enabling-jekyll-scholar&quot;&gt;Enabling Jekyll-Scholar&lt;/h2&gt;
-
-&lt;p&gt;Currently &lt;code class=&quot;highlighter-rouge&quot;&gt;bibliography.bib&lt;/code&gt; lives in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts/&lt;/code&gt; directory, but maybe there’s a better place to store it.  &lt;a href=&quot;https://github.com/inukshuk/jekyll-scholar&quot;&gt;The instructions for jekyll-scholar&lt;/a&gt; say that it scans for any &lt;code class=&quot;highlighter-rouge&quot;&gt;.bib&lt;/code&gt; file anywhere in the blog, so this may be more a matter of establishing a convention.   &lt;a href=&quot;https://forums.fast.ai/t/how-to-include-citation-in-nbdev-exported-html/62462/8?u=drscotthawley&quot;&gt;User rahuketu86 suggested&lt;/a&gt; creating a &lt;code class=&quot;highlighter-rouge&quot;&gt;_bibliography&lt;/code&gt; directory and putting the references there.&lt;/p&gt;
-
-&lt;p&gt;The .bib file will then get converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; file, so in my case it’ll be &lt;code class=&quot;highlighter-rouge&quot;&gt;bibliography.html&lt;/code&gt;, and this can then be imported via a Liquid tag:&lt;/p&gt;
+&lt;p&gt;At the end of your post, you signal the creation of the list of references section by using the Liquid tag&lt;/p&gt;
 
 &lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;bibliography&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;cited&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;…so I’ll put that at the very bottom of this file.   Currently that’ll generate a Liquid Syntax Error, &lt;code class=&quot;highlighter-rouge&quot;&gt;Unknown tag 'references'&lt;/code&gt;, because we haven’t enabled jekyll-scholar yet.   The &lt;code class=&quot;highlighter-rouge&quot;&gt;--cited&lt;/code&gt; means that it’ll only include those reference that are actually used in your post – no need to include hundreds of references from your BibTeX database that aren’t used!&lt;/p&gt;
+&lt;p&gt;…so I’ll put that at the very bottom of this file.  (Currently that’ll generate an error, because we haven’t enabled jekyll-scholar yet, but we’ll do that below.)   The &lt;code class=&quot;highlighter-rouge&quot;&gt;--cited&lt;/code&gt; means that it’ll only include those reference that are actually used in your post – no need to include hundreds of references from your BibTeX database that aren’t used!&lt;/p&gt;
 
-&lt;p&gt;To enable jekyll-scholar, Hamel says we don’t need to do anything installation-wise, so I hope that all I need to do is make the following two changes in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;h2 id=&quot;enabling-jekyll-scholar&quot;&gt;Enabling Jekyll-Scholar&lt;/h2&gt;
+
+&lt;p&gt;To enable jekyll-scholar, Hamel says we don’t need to do anything installation-wise, so I hope that all I need to do is make the following two changes&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Add “&lt;code class=&quot;highlighter-rouge&quot;&gt; - jekyll-scholar&lt;/code&gt;” to the list of &lt;code class=&quot;highlighter-rouge&quot;&gt;plugins:&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, add “&lt;code class=&quot;highlighter-rouge&quot;&gt; - jekyll-scholar&lt;/code&gt;” to the list of &lt;code class=&quot;highlighter-rouge&quot;&gt;plugins:&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Elsewhere in the file, specify a citation format e.g.,&lt;/p&gt;
+    &lt;p&gt;Edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; to include &lt;code class=&quot;highlighter-rouge&quot;&gt;gem 'jekyll-scholar'&lt;/code&gt; where the other plugins are listed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Optional: The defaut citation format is “apa”.  If you want to change that, you can specify a different &lt;a href=&quot;https://citationstyles.org/&quot;&gt;CSL&lt;/a&gt; file, only without the .csl.  In my case, I found the file &lt;code class=&quot;highlighter-rouge&quot;&gt;physical-review-d.csl&lt;/code&gt;, copied into my main blog directory, and then edited the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file to read&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;scholar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mla&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;physical-review-d&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;…in order to the citation style you see here.&lt;/p&gt;
 
 &lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
 
