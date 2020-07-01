@@ -1,5 +1,5 @@
 ---
-title: "Citations in Fastpages via BibTex and jekyll-scholar"
+title: "Citations in Fastpages via BibTeX and jekyll-scholar"
 description: Supporting scholarly blogging by drawing references from your database.
 layout: post
 toc: true
@@ -19,7 +19,7 @@ Hopefully what just happened above is that two citation markings were generated,
 
 ## Drawing from the Bibliography 
 
-To get the full citation info, we will draw from the sample BibTex file [references.bib](references.bib), which lives in a new directory we created called `_bibliography/`, and looks like this:
+To get the full citation info, we will draw from the sample BibTeX file [references.bib](references.bib), which lives in a new directory we created called `_bibliography/`, and looks like this:
 
 ```bibtex
 @conference{signaltrain,
