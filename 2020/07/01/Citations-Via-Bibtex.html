@@ -108,14 +108,14 @@ window.onload = wrap_img;
 </ul><h2 id="how-to-cite">
 <a class="anchor" href="#how-to-cite" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Cite</h2>
 
-<p>For demonstration purposes, I’ll take the liberty of citing a couple of my recent papers, namely the first SignalTrain paper<a class="citation" href="#signaltrain"> [1]</a> and the new one by Billy Mitchell<a class="citation" href="#billy_signaltrain2"> [2]</a>.  Instead of using the LaTeX format of \cite{ &lt;whatever&gt; }, we use the Liquid format of {% cite &lt;whatever&gt; %}.</p>
+<p>For demonstration purposes, I’ll take the liberty of citing a couple of my recent papers, namely the first SignalTrain paper<a class="citation" href="#signaltrain"> [1]</a> and the new one by Billy Mitchell<a class="citation" href="#billy_signaltrain2"> [2]</a>.  Instead of using the LaTeX format of \cite{ &lt;whatever&gt; }, I use the Liquid format of {% cite &lt;whatever&gt; %}.</p>
 
 <p>Hopefully what just happened above is that two citation markings were generated, and these point to the References section at the end of this post where the full citations are printed out using the citation format of my choice.</p>
 
 <h2 id="drawing-from-the-bibliography">
 <a class="anchor" href="#drawing-from-the-bibliography" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drawing from the Bibliography</h2>
 
-<p>In the main blog directory, create a new directory called <code class="highlighter-rouge">_bibliography</code>, and place your BibTeX file there as <a href="../_bibliography/references.bib">references.bib</a>.  In the case of this post, the references file looks like this:</p>
+<p>In the main blog directory, create a new directory called <code class="highlighter-rouge">_bibliography/</code>, and place your BibTeX file there as <a href="../_bibliography/references.bib">references.bib</a>.  In the case of this demo, the references file looks like this:</p>
 
 <pre><code class="language-bibtex">@conference{signaltrain,
   title = {Profiling Audio Compressors with Deep Neural Networks},
@@ -137,7 +137,7 @@ window.onload = wrap_img;
 <p><strong>NOTES:</strong></p>
 
 <ol>
-  <li>This is one references file for your entire blog. The great thing is that all your notebooks, all your Markdown posts, will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.</li>
+  <li>The (single) references file is for your entire blog. The great thing is that all your Jupyter notebooks, all your Markdown posts, will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.</li>
   <li>jekyll-scholar hates the <code class="highlighter-rouge">url</code>, <code class="highlighter-rouge">howpublished</code> and <code class="highlighter-rouge">note</code> fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.  I’m not yet sure how to get links into the references, but <a href="https://github.com/inukshuk/jekyll-scholar/issues/308">watch this space</a>.</li>
 </ol>
 
