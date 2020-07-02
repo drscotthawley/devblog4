@@ -72,7 +72,7 @@ To enable jekyll-scholar, all we need to do is make the following two changes, a
        style: <name>
    ```
 
-   ...naming one of the styles on [this list](https://github.com/hugoroy/csl-styles) (without the `.csl` ending).  Or you can supply your own [CSL](https://citationstyles.org/) file.  In my case, I found the file `physical-review-d.csl`, copied it into my main blog directory, and then added the following to `_config.yml`:
+   ...naming one of the styles on [this list](https://github.com/citation-style-language/styles) (without the `.csl` ending).  Or you can supply your own [CSL](https://citationstyles.org/) file.  In my case, I found the file `physical-review-d.csl`, copied it into my main blog directory, and then added the following to `_config.yml`:
 
    ```yaml
    scholar:
