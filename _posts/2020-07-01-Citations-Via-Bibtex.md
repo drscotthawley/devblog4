@@ -68,7 +68,7 @@ scholar:
 ```
 ...in order to render the citation style you see below (as well as the use of numbered brackets above for the citation markers). 
 
-
+Happy writing! 
 
 
 # References
