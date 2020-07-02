@@ -39,7 +39,7 @@ To get the full citation info, we will draw from the sample BibTeX file [referen
 } 
 ```
 
-**NOTE:** jekyll-scholar hates the `url`, `howpublished` and `note` BibTeX fields.  Not only will it not recognize them, it will throw and error and abort the build if any of these are encountered.
+**NOTE:** jekyll-scholar hates the `url`, `howpublished` and `note` fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.
 
 
 At the end of your post, you signal the creation of the full list of references by using the Liquid tag
