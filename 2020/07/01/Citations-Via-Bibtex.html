@@ -134,14 +134,19 @@ window.onload = wrap_img;
 } 
 </code></pre>
 
-<p>(<strong>NOTE:</strong> jekyll-scholar hates the <code class="highlighter-rouge">url</code>, <code class="highlighter-rouge">howpublished</code> and <code class="highlighter-rouge">note</code> fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.  I’m not yet sure how to get links into the references, but <a href="https://github.com/inukshuk/jekyll-scholar/issues/308">watch this space</a>.)</p>
+<p><strong>NOTES:</strong></p>
 
-<p>At the end of your post, you signal the creation of the full list of references by using the Liquid tag</p>
+<ol>
+  <li>This is one references file for your entire blog. The great thing is that all your notebooks, all your Markdown posts, will draw from this same one file, which could be hundreds of references long.</li>
+  <li>jekyll-scholar hates the <code class="highlighter-rouge">url</code>, <code class="highlighter-rouge">howpublished</code> and <code class="highlighter-rouge">note</code> fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.  I’m not yet sure how to get links into the references, but <a href="https://github.com/inukshuk/jekyll-scholar/issues/308">watch this space</a>.</li>
+</ol>
+
+<p>Finally, the end of your post, you signal the creation of the full list of references by using the Liquid tag</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">bibliography</span><span class="w"> </span><span class="o">--</span>cited<span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
 
-<p>…so I’ll put that at the very bottom of this file.  (Currently that’ll generate an error, because we haven’t enabled jekyll-scholar yet, but we’ll do that below.)   The <code class="highlighter-rouge">--cited</code> means that it’ll only include those references that are actually used in your post – i.e., so it won’t post hundreds of references from your BibTeX database that aren’t being cited!</p>
+<p>…so I’ll put that at the very bottom of this file.  (Currently that’ll generate an error, because we haven’t enabled jekyll-scholar yet, but we’ll do that next.)   The <code class="highlighter-rouge">--cited</code> means that it’ll only include those references that are actually used in your post – i.e., so it won’t post hundreds of references from your BibTeX database that aren’t being cited!</p>
 
 <h2 id="enabling-jekyll-scholar">
 <a class="anchor" href="#enabling-jekyll-scholar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enabling Jekyll-Scholar</h2>
