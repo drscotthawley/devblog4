@@ -140,7 +140,7 @@ window.onload = wrap_img;
 
 <p>Note that this  (single) references file is for your entire blog. The great thing about this is that all your Jupyter notebooks and Markdown posts will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.</p>
 
-<p>Finally, the end of your post, you signal the creation of the full list of references by using the Liquid tag</p>
+<p>Finally, at the end of your post, you signal the creation of the full list of references by using the Liquid tag</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">bibliography</span><span class="w"> </span><span class="o">--</span>cited<span class="w"> </span><span class="p">%}</span>
 </code></pre></div></div>
@@ -173,7 +173,7 @@ window.onload = wrap_img;
       <p>To quickly search the styles in the GitHub <a href="https://github.com/citation-style-language/styles">CSL style repository</a> by file name, press “t” to activate GitHub’s <a href="https://github.com/blog/793-introducing-the-file-finder">File Finder</a> and start typing.</p>
     </blockquote>
 
-    <p>For this demo, I chose the style <code class="highlighter-rouge">physical-review-d</code>, which produced the numbered-bracket citation markers above, and the reference format you see below in the References section.</p>
+    <p>Note however that the <code class="highlighter-rouge">csl-styles</code> Gem package used by jekyll-scholar <strong>lags behind the official CSL style repository</strong>, so some names you choose might not work.  In that case, you can supply the CSL file yourself.  For this demo, I found the file <code class="highlighter-rouge">physical-review-d.csl</code>, added it to my main blog directory, and then specified the style name <code class="highlighter-rouge">physical-review-d</code> in <code class="highlighter-rouge">_config.yml</code>.  This produced the numbered-bracket citation markers above, and the reference format you see below in the References section.</p>
   </li>
 </ol>
 
