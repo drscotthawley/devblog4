@@ -69,9 +69,11 @@ To enable jekyll-scholar, all we need to do is make the following two changes, a
 scholar:
   style: physical-review-d
 ```
-...in order to render the citation style you see below (as well as the use of numbered brackets above for the citation markers). 
+...in order to render the citation style you see below (as well as the use of numbered brackets above for the citation markers).   
 
-Happy writing! 
+By the way, did you notice what we just did with the citation format?  The convenience of this BibTeX/jekyll-scholar approach is that instead of having to manually edit full references on each individual page -- say, you wanted to change citation formats (or alternatively, update certain information about one paper that appears in multiple posts) -- now you only change **one line** in `_config.yml` (or correct the reference in one spot in `references.bib`) and the system "builds out" the change "everywhere. "
+
+Happy blogging! 
 
 
 # References
