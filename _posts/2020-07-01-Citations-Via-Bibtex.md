@@ -47,7 +47,7 @@ In the main blog directory, create a new directory called `_bibliography/`, and 
 
 Note that this  (single) references file is for your entire blog. The great thing about this is that all your Jupyter notebooks and Markdown posts will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.
 
-Finally, the end of your post, you signal the creation of the full list of references by using the Liquid tag
+Finally, at the end of your post, you signal the creation of the full list of references by using the Liquid tag
 
 ```liquid
 {% raw %}{% bibliography --cited %}{% endraw %}
@@ -76,7 +76,7 @@ To enable jekyll-scholar, all we need to do is make the following two changes, a
 
    > To quickly search the styles in the GitHub [CSL style repository](https://github.com/citation-style-language/styles) by file name, press “t” to activate GitHub’s [File Finder](https://github.com/blog/793-introducing-the-file-finder) and start typing.
 
-   For this demo, I chose the style `physical-review-d`, which produced the numbered-bracket citation markers above, and the reference format you see below in the References section.
+   Note however that the `csl-styles` Gem package used by jekyll-scholar **lags behind the official CSL style repository**, so some names you choose might not work.  In that case, you can supply the CSL file yourself.  For this demo, I found the file `physical-review-d.csl`, added it to my main blog directory, and then specified the style name `physical-review-d` in `_config.yml`.  This produced the numbered-bracket citation markers above, and the reference format you see below in the References section.
 
 Did you notice the 'magic' of what we just did with the citation format?  The convenience of this BibTeX/jekyll-scholar approach is that instead of having to manually edit full references on each individual page -- say, if you wanted to change citation formats (or alternatively, update information about a paper  cited in multiple posts), -- now you only change **one line** in `_config.yml` (or update one spot in `references.bib`) and the system "builds out" the change "everywhere."
 
