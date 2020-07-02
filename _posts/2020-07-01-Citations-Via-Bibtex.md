@@ -48,7 +48,7 @@ At the end of your post, you signal the creation of the full list of references 
 {% raw %}{% bibliography --cited %}{% endraw %}
 ```
 
-...so I'll put that at the very bottom of this file.  (Currently that'll generate an error, because we haven't enabled jekyll-scholar yet, but we'll do that below.)   The `--cited` means that it'll only include those references that are actually used in your post -- no need to include hundreds of references from your BibTeX database that aren't used!
+...so I'll put that at the very bottom of this file.  (Currently that'll generate an error, because we haven't enabled jekyll-scholar yet, but we'll do that below.)   The `--cited` means that it'll only include those references that are actually used in your post -- i.e., so it won't post hundreds of references from your BibTeX database that aren't being cited!
 
 
 ## Enabling Jekyll-Scholar
