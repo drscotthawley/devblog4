@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://drscotthawley.github.io/devblog4/feed.xml" rel="self" type="application/atom+xml" /><link href="https://drscotthawley.github.io/devblog4/" rel="alternate" type="text/html" /><updated>2020-07-02T04:09:49-05:00</updated><id>https://drscotthawley.github.io/devblog4/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Citations in Fastpages via BibTeX and jekyll-scholar</title><link href="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html" rel="alternate" type="text/html" title="Citations in Fastpages via BibTeX and jekyll-scholar" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex</id><content type="html" xml:base="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html">&lt;p&gt;&lt;em&gt;(N.B.: The following was created as a Markdown file in &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts/&lt;/code&gt;. For Jupyter notebooks, the same things apply; one simply enters the Liquid codes into Markdown cells.  &lt;a href=&quot;https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html&quot;&gt;Quick Jupyter example.&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://drscotthawley.github.io/devblog4/feed.xml" rel="self" type="application/atom+xml" /><link href="https://drscotthawley.github.io/devblog4/" rel="alternate" type="text/html" /><updated>2020-07-02T04:24:22-05:00</updated><id>https://drscotthawley.github.io/devblog4/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Citations in Fastpages via BibTeX and jekyll-scholar</title><link href="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html" rel="alternate" type="text/html" title="Citations in Fastpages via BibTeX and jekyll-scholar" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex</id><content type="html" xml:base="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html">&lt;p&gt;&lt;em&gt;(N.B.: The following was created as a Markdown file in &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts/&lt;/code&gt;. For Jupyter notebooks, the same things apply; one simply enters the Liquid codes into Markdown cells.  &lt;a href=&quot;https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html&quot;&gt;Quick Jupyter example.&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;
 
 &lt;h2 id=&quot;how-to-cite&quot;&gt;How to Cite&lt;/h2&gt;
 
@@ -16,6 +16,7 @@
   booktitle = {Audio Engineering Society Convention 147},
   month = {Oct},
   year = {2019},
+  url = {http://www.aes.org/e-lib/browse.cfm?elib=20595}
 }               
 
 @article{billy_signaltrain2, 
@@ -24,15 +25,11 @@
   journal={ArXiv},  
   year={2020},
   volume={abs/2006.05584} 
+  url = {https://arxiv.org/abs/2006.05584}
 } 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;NOTES:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The (single) references file is for your entire blog. The great thing about this is that all your Jupyter notebooks and Markdown posts will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.&lt;/li&gt;
-  &lt;li&gt;jekyll-scholar hates the &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;howpublished&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;note&lt;/code&gt; fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.  I’m not yet sure how to get links into the references, but &lt;a href=&quot;https://github.com/inukshuk/jekyll-scholar/issues/308&quot;&gt;watch this space&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Note that this  (single) references file is for your entire blog. The great thing about this is that all your Jupyter notebooks and Markdown posts will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.&lt;/p&gt;
 
 &lt;p&gt;Finally, the end of your post, you signal the creation of the full list of references by using the Liquid tag&lt;/p&gt;
 
