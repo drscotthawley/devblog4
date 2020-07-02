@@ -71,7 +71,7 @@ scholar:
 ```
 ...in order to render the citation style you see below (as well as the use of numbered brackets above for the citation markers).   
 
-Did you notice the 'magic' of what we just did with the citation format?  The convenience of this BibTeX/jekyll-scholar approach is that instead of having to manually edit full references on each individual page -- say, if you wanted to change citation formats (or alternatively, update information about one paper that appears in multiple posts) -- now you only change **one line** in `_config.yml` (or update one spot in `references.bib`) and the system "builds out" the change "everywhere."
+Did you notice the 'magic' of what we just did with the citation format?  The convenience of this BibTeX/jekyll-scholar approach is that instead of having to manually edit full references on each individual page -- say, if you wanted to change citation formats (or alternatively, update information about a paper  cited in multiple posts), -- now you only change **one line** in `_config.yml` (or update one spot in `references.bib`) and the system "builds out" the change "everywhere."
 
 Happy blogging! 
 
