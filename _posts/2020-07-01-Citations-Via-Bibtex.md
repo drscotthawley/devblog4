@@ -47,7 +47,7 @@ In the main blog directory, create a new directory called `_bibliography/`, and 
 
 Note that this  (single) references file is for your entire blog. The great thing about this is that all your Jupyter notebooks and Markdown posts will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.
 
-Finally, at the end of your post, you signal the creation of the full list of references by using the Liquid tag
+Finally, at the end of your post, you signal the creation of the list of references by using the Liquid tag
 
 ```liquid
 {% raw %}{% bibliography --cited %}{% endraw %}
