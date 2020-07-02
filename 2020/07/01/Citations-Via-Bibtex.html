@@ -112,7 +112,7 @@ window.onload = wrap_img;
 
 <p>For demonstration purposes, I’ll take the liberty of citing a couple of my recent papers, namely the first SignalTrain paper<a class="citation" href="#signaltrain"> [1]</a> and the new one by Billy Mitchell<a class="citation" href="#billy_signaltrain2"> [2]</a>.  Instead of using the LaTeX code \cite{ &lt;whatever&gt; }, I use the Liquid code {% cite &lt;whatever&gt; %}.  For example, the first citation above is written as “{% cite signaltrain %}” in the Markdown file that generates this HTML page.</p>
 
-<p>The two citation markings above point to the References section at the end of this post where the full citations are printed out using the citation format of my choice.</p>
+<p>The two citation markings above point to the References section at the end of this post where the full references are printed out in the bibliography style of my choice.</p>
 
 <h2 id="drawing-from-the-bibliography">
 <a class="anchor" href="#drawing-from-the-bibliography" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drawing from the Bibliography</h2>
@@ -173,7 +173,7 @@ window.onload = wrap_img;
       <p>To quickly search the styles in the GitHub <a href="https://github.com/citation-style-language/styles">CSL style repository</a> by file name, press “t” to activate GitHub’s <a href="https://github.com/blog/793-introducing-the-file-finder">File Finder</a> and start typing.</p>
     </blockquote>
 
-    <p>Note however that the <code class="highlighter-rouge">csl-styles</code> Gem package used by jekyll-scholar <strong>lags behind the official CSL style repository</strong>, so some names you choose may not work.  In that case, you can supply a CSL file yourself.  For this demo, I found the file <code class="highlighter-rouge">physical-review-d.csl</code>, added it to my main blog directory, and then specified the style name <code class="highlighter-rouge">physical-review-d</code> in <code class="highlighter-rouge">_config.yml</code>.  This produced the bracketed-number citation markers above and the reference format you see below in the References section.</p>
+    <p>Note however that the <code class="highlighter-rouge">csl-styles</code> Gem package used by jekyll-scholar <strong>lags behind the official CSL style repository</strong>, so some names you choose may not work.  In that case, you can supply a CSL file yourself.  For this demo, I found the file <code class="highlighter-rouge">physical-review-d.csl</code>, added it to my main blog directory, and then specified the style name <code class="highlighter-rouge">physical-review-d</code> in <code class="highlighter-rouge">_config.yml</code>.  This produced the bracketed-number citation markers above, and the reference format you see below in the References section.</p>
   </li>
 </ol>
 
