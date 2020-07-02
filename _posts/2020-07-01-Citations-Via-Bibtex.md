@@ -39,16 +39,19 @@ In the main blog directory, create a new directory called `_bibliography`, and p
 } 
 ```
 
-(**NOTE:** jekyll-scholar hates the `url`, `howpublished` and `note` fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.  I'm not yet sure how to get links into the references, but [watch this space](https://github.com/inukshuk/jekyll-scholar/issues/308).)
+**NOTES:**
+
+1. This is one references file for your entire blog. The great thing is that all your notebooks, all your Markdown posts, will draw from this same one file, which could be hundreds of references long. 
+2. jekyll-scholar hates the `url`, `howpublished` and `note` fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.  I'm not yet sure how to get links into the references, but [watch this space](https://github.com/inukshuk/jekyll-scholar/issues/308).
 
 
-At the end of your post, you signal the creation of the full list of references by using the Liquid tag
+Finally, the end of your post, you signal the creation of the full list of references by using the Liquid tag
 
 ```liquid
 {% raw %}{% bibliography --cited %}{% endraw %}
 ```
 
-...so I'll put that at the very bottom of this file.  (Currently that'll generate an error, because we haven't enabled jekyll-scholar yet, but we'll do that below.)   The `--cited` means that it'll only include those references that are actually used in your post -- i.e., so it won't post hundreds of references from your BibTeX database that aren't being cited!
+...so I'll put that at the very bottom of this file.  (Currently that'll generate an error, because we haven't enabled jekyll-scholar yet, but we'll do that next.)   The `--cited` means that it'll only include those references that are actually used in your post -- i.e., so it won't post hundreds of references from your BibTeX database that aren't being cited!
 
 
 ## Enabling Jekyll-Scholar
