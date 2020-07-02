@@ -19,7 +19,7 @@ Hopefully what just happened above is that two citation markings were generated,
 
 ## Drawing from the Bibliography 
 
-In the main blog directory, create a new directory called `_bibliography`, and place your BibTeX file there as [references.bib](../_bibliography/references.bib).  In the case this post, the references file looks like this:
+In the main blog directory, create a new directory called `_bibliography`, and place your BibTeX file there as [references.bib](../_bibliography/references.bib).  In the case of this post, the references file looks like this:
 
 ```bibtex
 @conference{signaltrain,
