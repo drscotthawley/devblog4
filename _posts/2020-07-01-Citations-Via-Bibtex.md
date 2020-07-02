@@ -9,7 +9,7 @@ hide: false
 search_exclude: false
 ---
 
-*N.B.: The following was created as a Markdown file in `_posts/`. For Jupyter notebooks, the same things apply; one simply enters the Liquid codes into Markdown cells.  [Quick Jupyter example.](https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html)*
+*(N.B.: The following was created as a Markdown file in `_posts/`. For Jupyter notebooks, the same things apply; one simply enters the Liquid codes into Markdown cells.  [Quick Jupyter example.](https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html)*)
 
 
 
