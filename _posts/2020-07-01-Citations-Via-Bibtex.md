@@ -72,7 +72,7 @@ To enable jekyll-scholar, all we need to do is make the following two changes, a
        style: <name>
    ```
 
-   ...naming one of the styles in the [CSL style repository](https://github.com/citation-style-language/styles) (leave off the `.csl` ending).  Tip from the CSL maintainers:
+   ...naming one of the styles in the [CSL style repository](https://github.com/citation-style-language/styles) (but leave off the `.csl` ending).  Tip from the CSL maintainers:
 
    > To quickly search the styles in the GitHub [CSL style repository](https://github.com/citation-style-language/styles) by file name, press “t” to activate GitHub’s [File Finder](https://github.com/blog/793-introducing-the-file-finder) and start typing.
 
