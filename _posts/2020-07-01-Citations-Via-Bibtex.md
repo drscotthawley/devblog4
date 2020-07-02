@@ -24,7 +24,7 @@ To get the full citation info, we will draw from the sample BibTeX file [referen
 ```bibtex
 @conference{signaltrain,
   title = {Profiling Audio Compressors with Deep Neural Networks},
-  author = {Hawley, Scott and Colburn, Benjamin and Mimilakis, Stylianos Ioannis},
+  author = {Hawley, Scott H. and Colburn, Benjamin and Mimilakis, Stylianos Ioannis},
   booktitle = {Audio Engineering Society Convention 147},
   month = {Oct},
   year = {2019},
