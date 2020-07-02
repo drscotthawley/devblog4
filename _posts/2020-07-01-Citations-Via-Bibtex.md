@@ -11,7 +11,7 @@ search_exclude: false
 
 ## How to Cite 
 
-For demonstration purposes, I'll take the liberty of citing a couple of my recent papers, namely the first SignalTrain paper{% cite signaltrain %} and the new one by Billy Mitchell{% cite billy_signaltrain2 %}.  Instead of using the LaTeX format of {% raw %}\cite{ \<whatever> }{% endraw %}, we use the Liquid format of {% raw  %}{% cite \<whatever> %}{% endraw %}.
+For demonstration purposes, I'll take the liberty of citing a couple of my recent papers, namely the first SignalTrain paper{% cite signaltrain %} and the new one by Billy Mitchell{% cite billy_signaltrain2 %}.  Instead of using the LaTeX format of {% raw %}\cite{ \<whatever> }{% endraw %}, I use the Liquid format of {% raw  %}{% cite \<whatever> %}{% endraw %}.
 
 
 Hopefully what just happened above is that two citation markings were generated, and these point to the References section at the end of this post where the full citations are printed out using the citation format of my choice.
@@ -19,7 +19,7 @@ Hopefully what just happened above is that two citation markings were generated,
 
 ## Drawing from the Bibliography 
 
-In the main blog directory, create a new directory called `_bibliography`, and place your BibTeX file there as [references.bib](../_bibliography/references.bib).  In the case of this post, the references file looks like this:
+In the main blog directory, create a new directory called `_bibliography/`, and place your BibTeX file there as [references.bib](../_bibliography/references.bib).  In the case of this demo, the references file looks like this:
 
 ```bibtex
 @conference{signaltrain,
@@ -41,7 +41,7 @@ In the main blog directory, create a new directory called `_bibliography`, and p
 
 **NOTES:**
 
-1. This is one references file for your entire blog. The great thing is that all your notebooks, all your Markdown posts, will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post. 
+1. The (single) references file is for your entire blog. The great thing is that all your Jupyter notebooks, all your Markdown posts, will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post. 
 2. jekyll-scholar hates the `url`, `howpublished` and `note` fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.  I'm not yet sure how to get links into the references, but [watch this space](https://github.com/inukshuk/jekyll-scholar/issues/308).
 
 
