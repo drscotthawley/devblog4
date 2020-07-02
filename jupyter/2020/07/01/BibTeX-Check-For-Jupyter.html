@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>BibTeX Check for Jupyter | fastpages</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="BibTeX Check for Jupyter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Just making sure; the previous entry was all markdown" />
+<meta property="og:description" content="Just making sure; the previous entry was all markdown" />
+<link rel="canonical" href="https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html" />
+<meta property="og:url" content="https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html"},"description":"Just making sure; the previous entry was all markdown","@type":"BlogPosting","url":"https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html","headline":"BibTeX Check for Jupyter","dateModified":"2020-07-01T00:00:00-05:00","datePublished":"2020-07-01T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/devblog4/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://drscotthawley.github.io/devblog4/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/devblog4/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>BibTeX Check for Jupyter | fastpages</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="BibTeX Check for Jupyter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Just making sure; the previous entry was all markdown" />
+<meta property="og:description" content="Just making sure; the previous entry was all markdown" />
+<link rel="canonical" href="https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html" />
+<meta property="og:url" content="https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html"},"description":"Just making sure; the previous entry was all markdown","@type":"BlogPosting","url":"https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html","headline":"BibTeX Check for Jupyter","dateModified":"2020-07-01T00:00:00-05:00","datePublished":"2020-07-01T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://drscotthawley.github.io/devblog4/feed.xml" title="fastpages" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/devblog4/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/devblog4/about/">About Me</a><a class="page-link" href="/devblog4/search/">Search</a><a class="page-link" href="/devblog4/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">BibTeX Check for Jupyter</h1><p class="page-description">Just making sure; the previous entry was all markdown</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-07-01T00:00:00-05:00" itemprop="datePublished">
+        Jul 1, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/devblog4/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/drscotthawley/devblog4/tree/master/_notebooks/2020-07-01-BibTeX-Check-For-Jupyter.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/devblog4/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/drscotthawley/devblog4/master?filepath=_notebooks%2F2020-07-01-BibTeX-Check-For-Jupyter.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/devblog4/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/drscotthawley/devblog4/blob/master/_notebooks/2020-07-01-BibTeX-Check-For-Jupyter.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/devblog4/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#References">References </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-07-01-BibTeX-Check-For-Jupyter.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I just did a <a href="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html#references">post showing BibTeX usage for Markdown posts</a>.  In this notebook, we'll also try citing but this time from within a Jupyter Notebook.  I want to make sure this works in Jupyter too!</p>
+<p>Just to assert that we're really using Python,...</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Yes, this is Python code!"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Yes, this is Python code!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, in this Markdown cell, I'll include the same text I did before:</p>
+<p>For demonstration purposes, I'll take the liberty of citing a couple of my recent papers, namely the first SignalTrain paper<a class="citation" href="#signaltrain"> [1]</a> and the new one by Billy Mitchell<a class="citation" href="#billy_signaltrain2"> [2]</a>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># and a little more code</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">'o-'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f2578129eb8&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0A">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And now we wrap it up with the same bibliography inclusion as the previous post...</p>
+<h2 id="References">
+<a class="anchor" href="#References" aria-hidden="true"><span class="octicon octicon-link"></span></a>References<a class="anchor-link" href="#References"> </a>
+</h2>
+<p></p>
+<ol class="bibliography">
+<li><span id="signaltrain">[1]S. H. Hawley, B. Colburn, and S. I. Mimilakis, in <i>Audio Engineering Society Convention 147</i> (2019).</span></li>
+<li><span id="billy_signaltrain2">[2]W. Mitchell and S. H. Hawley, ArXiv <b>abs/2006.05584</b>, (2020).</span></li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="drscotthawley/devblog4"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/devblog4/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/devblog4/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/devblog4/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/devblog4/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/devblog4/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
