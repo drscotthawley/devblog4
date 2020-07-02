@@ -65,7 +65,7 @@ To enable jekyll-scholar, all we need to do is make the following two changes, a
 
 2. Edit the `Gemfile` to include `gem 'jekyll-scholar'` where the other plugins are listed. 
 
-3. Optional: The default citation format is "apa".  If you want to change that, you can specify a different style in as an option to `scholar:` in your `_config.yml` file, using any of the styles on  [this list](https://github.com/hugoroy/csl-styles) (without the `.csl` ending), or you can use your own [CSL](https://citationstyles.org/) file.  In my case, I did the latter: I found the file `physical-review-d.csl`, copied it into my main blog directory, and then added the following to my `_config.yml` file:
+3. Optional: The default citation format is "apa".  If you want to change that, you can specify a different style in as an option to `scholar:` in your `_config.yml` file, naming one of the styles on [this list](https://github.com/hugoroy/csl-styles) (without the `.csl` ending), or you can use your own [CSL](https://citationstyles.org/) file.  In my case, I did the latter: I found the file `physical-review-d.csl`, copied it into my main blog directory, and then added the following to my `_config.yml` file:
 
 ```yaml
 scholar:
