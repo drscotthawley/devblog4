@@ -53,7 +53,7 @@ Finally, at the end of your post, you signal the creation of the list of referen
 {% raw %}{% bibliography --cited %}{% endraw %}
 ```
 
-...so I'll put that at the very bottom of this file.  (Currently that'll generate an error, because we haven't enabled jekyll-scholar yet, but we'll do that next.)   The optional argument `--cited` means that it'll only include those references that are actually cited in your post.
+...so I'll put that at the very bottom of this file.  (Currently that'll generate an error, because we haven't enabled jekyll-scholar yet, but we'll do that next.)   The optional argument `--cited` means it'll only include those references that are cited in your post.
 
 
 ## Enabling Jekyll-Scholar
