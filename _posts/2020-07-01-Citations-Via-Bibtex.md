@@ -41,7 +41,7 @@ In the main blog directory, create a new directory called `_bibliography`, and p
 
 **NOTES:**
 
-1. This is one references file for your entire blog. The great thing is that all your notebooks, all your Markdown posts, will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need. 
+1. This is one references file for your entire blog. The great thing is that all your notebooks, all your Markdown posts, will draw from this same one file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post. 
 2. jekyll-scholar hates the `url`, `howpublished` and `note` fields that many of us are now accustomed to.  Not only will it not recognize them, it will throw an error and abort the build if any of these are encountered.  I'm not yet sure how to get links into the references, but [watch this space](https://github.com/inukshuk/jekyll-scholar/issues/308).
 
 
