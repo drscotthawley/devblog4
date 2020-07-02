@@ -160,14 +160,23 @@ window.onload = wrap_img;
     <p>Edit the <code class="highlighter-rouge">Gemfile</code> to include <code class="highlighter-rouge">gem 'jekyll-scholar'</code> where the other plugins are listed.</p>
   </li>
   <li>
-    <p>Optional: The default citation format is “apa”.  If you want to change that, you can specify a different style in as an option to <code class="highlighter-rouge">scholar:</code> in your <code class="highlighter-rouge">_config.yml</code> file, naming one of the styles on <a href="https://github.com/hugoroy/csl-styles">this list</a> (without the <code class="highlighter-rouge">.csl</code> ending), or you can supply your own <a href="https://citationstyles.org/">CSL</a> file.  In my case, I did the latter: I found the file <code class="highlighter-rouge">physical-review-d.csl</code>, copied it into my main blog directory, and then added the following to my <code class="highlighter-rouge">_config.yml</code> file:</p>
+    <p>Optional: The default citation format is “apa”.  If you want to change that, you can add the following to your <code class="highlighter-rouge">_config.yml</code> file:</p>
+
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="na">scholar</span><span class="pi">:</span>
+    <span class="na">style</span><span class="pi">:</span> <span class="s">&lt;name&gt;</span>
+</code></pre></div>    </div>
+
+    <p>…naming one of the styles on <a href="https://github.com/hugoroy/csl-styles">this list</a> (without the <code class="highlighter-rouge">.csl</code> ending).  Or you can supply your own <a href="https://citationstyles.org/">CSL</a> file.  In my case, I found the file <code class="highlighter-rouge">physical-review-d.csl</code>, copied it into my main blog directory, and then added the following to <code class="highlighter-rouge">_config.yml</code>:</p>
+
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="na">scholar</span><span class="pi">:</span>
+  <span class="na">style</span><span class="pi">:</span> <span class="s">physical-review-d</span>  
+</code></pre></div>    </div>
+
+    <p>…in order to render the citation style you see below, and the numbered-bracket citation markers above.</p>
   </li>
 </ol>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">scholar</span><span class="pi">:</span>
-  <span class="na">style</span><span class="pi">:</span> <span class="s">physical-review-d</span>
-</code></pre></div></div>
-<p>…in order to render the citation style you see below, and the numbered-bracket citation markers above.</p>
 
 <p>Did you notice the ‘magic’ of what we just did with the citation format?  The convenience of this BibTeX/jekyll-scholar approach is that instead of having to manually edit full references on each individual page – say, if you wanted to change citation formats (or alternatively, update information about a paper  cited in multiple posts), – now you only change <strong>one line</strong> in <code class="highlighter-rouge">_config.yml</code> (or update one spot in <code class="highlighter-rouge">references.bib</code>) and the system “builds out” the change “everywhere.”</p>
 
