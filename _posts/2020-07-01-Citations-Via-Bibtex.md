@@ -72,7 +72,11 @@ To enable jekyll-scholar, all we need to do is make the following two changes, a
        style: <name>
    ```
 
-   ...naming one of the styles on [this list](https://github.com/citation-style-language/styles) (without the `.csl` ending).  Or you can supply your own [CSL](https://citationstyles.org/) file.  In my case, I found the file `physical-review-d.csl`, copied it into my main blog directory, and then added the following to `_config.yml`:
+   ...naming one of the styles on [this list](https://github.com/citation-style-language/styles) (without the `.csl` ending).  Note from the CSL maintainers:
+
+   > To quickly search the styles in the GitHub [CSL style repository](https://github.com/citation-style-language/styles) by file name, press “t” to activate GitHub’s [File Finder](https://github.com/blog/793-introducing-the-file-finder) and start typing.
+
+   Or you can supply your own [CSL](https://citationstyles.org/) file.  I found the file `physical-review-d.csl` (which is actually on the main list now, but not the previous list version), copied it into my main blog directory, and then added the following to `_config.yml`:
 
    ```yaml
    scholar:
