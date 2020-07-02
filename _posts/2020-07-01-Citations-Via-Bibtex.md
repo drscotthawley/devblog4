@@ -65,13 +65,21 @@ To enable jekyll-scholar, all we need to do is make the following two changes, a
 
 2. Edit the `Gemfile` to include `gem 'jekyll-scholar'` where the other plugins are listed. 
 
-3. Optional: The default citation format is "apa".  If you want to change that, you can specify a different style in as an option to `scholar:` in your `_config.yml` file, naming one of the styles on [this list](https://github.com/hugoroy/csl-styles) (without the `.csl` ending), or you can supply your own [CSL](https://citationstyles.org/) file.  In my case, I did the latter: I found the file `physical-review-d.csl`, copied it into my main blog directory, and then added the following to my `_config.yml` file:
+3. Optional: The default citation format is "apa".  If you want to change that, you can add the following to your `_config.yml` file: 
 
-```yaml
-scholar:
-  style: physical-review-d
-```
-...in order to render the citation style you see below, and the numbered-bracket citation markers above.    
+   ```yaml
+   scholar:
+       style: <name>
+   ```
+
+   ...naming one of the styles on [this list](https://github.com/hugoroy/csl-styles) (without the `.csl` ending).  Or you can supply your own [CSL](https://citationstyles.org/) file.  In my case, I found the file `physical-review-d.csl`, copied it into my main blog directory, and then added the following to `_config.yml`:
+
+   ```yaml
+   scholar:
+     style: physical-review-d  
+   ```
+
+   ...in order to render the citation style you see below, and the numbered-bracket citation markers above.
 
 Did you notice the 'magic' of what we just did with the citation format?  The convenience of this BibTeX/jekyll-scholar approach is that instead of having to manually edit full references on each individual page -- say, if you wanted to change citation formats (or alternatively, update information about a paper  cited in multiple posts), -- now you only change **one line** in `_config.yml` (or update one spot in `references.bib`) and the system "builds out" the change "everywhere."
 
