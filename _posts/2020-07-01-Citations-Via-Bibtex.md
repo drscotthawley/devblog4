@@ -76,14 +76,7 @@ To enable jekyll-scholar, all we need to do is make the following two changes, a
 
    > To quickly search the styles in the GitHub [CSL style repository](https://github.com/citation-style-language/styles) by file name, press “t” to activate GitHub’s [File Finder](https://github.com/blog/793-introducing-the-file-finder) and start typing.
 
-   Or you can supply your own [CSL](https://citationstyles.org/) file.  I found the file `physical-review-d.csl` (which is actually on the main list now, but wasn't in the previous version), copied it into my main blog directory, and then added the following to `_config.yml`:
-
-   ```yaml
-   scholar:
-     style: physical-review-d  
-   ```
-
-   ...in order to render the citation style you see below, and the numbered-bracket citation markers above.
+   For this demo, I chose the style `physical-review-d`, which produced the numbered-bracket citation markers above, and the reference format you see below in the References.
 
 Did you notice the 'magic' of what we just did with the citation format?  The convenience of this BibTeX/jekyll-scholar approach is that instead of having to manually edit full references on each individual page -- say, if you wanted to change citation formats (or alternatively, update information about a paper  cited in multiple posts), -- now you only change **one line** in `_config.yml` (or update one spot in `references.bib`) and the system "builds out" the change "everywhere."
 
