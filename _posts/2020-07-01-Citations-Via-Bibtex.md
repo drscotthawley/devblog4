@@ -14,7 +14,7 @@ search_exclude: false
 Since this is my own post, I'll take the liberty of citing my own papers ;-), namely the first SignalTrain paper{% cite signaltrain %} and the new one by Billy Mitchell{% cite billy_signaltrain2 %}.  Instead of using the LaTeX format of {% raw %}\cite{ \<whatever> }{% endraw %}, we use the Liquid format of {% raw  %}{% cite \<whatever> %}{% endraw %}.
 
 
-Hopefully what just happened above is that two citation markings were generated, and these then point to the References section at the end of this post where the full citations are printed out, using the citation format of my choice.
+Hopefully what just happened above is that two citation markings were generated, and these point to the References section at the end of this post where the full citations are printed out using the citation format of my choice.
 
 
 ## Drawing from the Bibliography 
