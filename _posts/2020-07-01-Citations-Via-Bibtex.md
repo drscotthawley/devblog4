@@ -7,10 +7,9 @@ comments: true
 image:
 hide: false
 search_exclude: false
-redirect_to: https://drscotthawley.github.io/blog/2020/07/01/Citations-Via-Bibtex.html
 ---
 
-## This is an old version of this document. [New Version Here](https://drscotthawley.github.io/blog/2020/07/01/Citations-Via-Bibtex.html).
+## Link to [newer version of this document](https://drscotthawley.github.io/blog/2020/07/01/Citations-Via-Bibtex.html).
 
 
 *(N.B.: The following was created as a Markdown file in `_posts/`. For Jupyter notebooks, the same things apply; one simply enters the Liquid codes into Markdown cells.  [Quick Jupyter example.](https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html)*)
