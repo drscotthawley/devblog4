@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://drscotthawley.github.io/devblog4/feed.xml" rel="self" type="application/atom+xml" /><link href="https://drscotthawley.github.io/devblog4/" rel="alternate" type="text/html" /><updated>2020-07-18T21:58:53-05:00</updated><id>https://drscotthawley.github.io/devblog4/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Citations in Fastpages via BibTeX and jekyll-scholar</title><link href="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html" rel="alternate" type="text/html" title="Citations in Fastpages via BibTeX and jekyll-scholar" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex</id><content type="html" xml:base="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html"></content><author><name></name></author><summary type="html">This is an old version of this document. New Version Here.</summary></entry><entry><title type="html">BibTeX Check for Jupyter</title><link href="https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html" rel="alternate" type="text/html" title="BibTeX Check for Jupyter" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter</id><content type="html" xml:base="https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html">&lt;!--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://drscotthawley.github.io/devblog4/feed.xml" rel="self" type="application/atom+xml" /><link href="https://drscotthawley.github.io/devblog4/" rel="alternate" type="text/html" /><updated>2020-07-20T15:24:21-05:00</updated><id>https://drscotthawley.github.io/devblog4/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Citations in Fastpages via BibTeX and jekyll-scholar</title><link href="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html" rel="alternate" type="text/html" title="Citations in Fastpages via BibTeX and jekyll-scholar" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex</id><content type="html" xml:base="https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html">&lt;h2 id=&quot;link-to-newer-version-of-this-document&quot;&gt;Link to &lt;a href=&quot;https://drscotthawley.github.io/blog/2020/07/01/Citations-Via-Bibtex.html&quot;&gt;newer version of this document&lt;/a&gt;.&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;(N.B.: The following was created as a Markdown file in &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts/&lt;/code&gt;. For Jupyter notebooks, the same things apply; one simply enters the Liquid codes into Markdown cells.  &lt;a href=&quot;https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html&quot;&gt;Quick Jupyter example.&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-cite&quot;&gt;How to Cite&lt;/h2&gt;
+
+&lt;p&gt;For demonstration purposes, I’ll take the liberty of citing a couple of my recent papers, namely the first SignalTrain paper&lt;a class=&quot;citation&quot; href=&quot;#signaltrain&quot;&gt; [1]&lt;/a&gt; and the new one by Billy Mitchell&lt;a class=&quot;citation&quot; href=&quot;#billy_signaltrain2&quot;&gt; [2]&lt;/a&gt;.  Instead of using the LaTeX code \cite{ &amp;lt;whatever&amp;gt; }, I use the Liquid code {% cite &amp;lt;whatever&amp;gt; %}.  For example, the first citation above is written as “{% cite signaltrain %}” in the Markdown file that generates this HTML page.&lt;/p&gt;
+
+&lt;p&gt;The two citation markings above point to the References section at the end of this post where the full references are printed out in the bibliography style of my choice.&lt;/p&gt;
+
+&lt;h2 id=&quot;drawing-from-the-bibliography&quot;&gt;Drawing from the Bibliography&lt;/h2&gt;
+
+&lt;p&gt;In the main blog directory, create a new directory called &lt;code class=&quot;highlighter-rouge&quot;&gt;_bibliography/&lt;/code&gt;, and place your BibTeX file there as &lt;a href=&quot;../_bibliography/references.bib&quot;&gt;references.bib&lt;/a&gt;.  In the case of this demo, the references file looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bibtex&quot;&gt;@conference{signaltrain,
+  title = {Profiling Audio Compressors with Deep Neural Networks},
+  author = {Hawley, Scott H. and Colburn, Benjamin and Mimilakis, Stylianos Ioannis},
+  booktitle = {Audio Engineering Society Convention 147},
+  month = {Oct},
+  year = {2019},
+  url = {http://www.aes.org/e-lib/browse.cfm?elib=20595}
+}               
+
+@article{billy_signaltrain2,
+  title={Exploring Quality and Generalizability in Parameterized Neural Audio Effects},
+  author={William Mitchell and Scott H. Hawley},
+  journal={ArXiv},  
+  year={2020},
+  volume={abs/2006.05584}
+  url = {https://arxiv.org/abs/2006.05584}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that this  (single) references file is for your entire blog. The great thing about this is that all your Jupyter notebooks and Markdown posts will draw from this same file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.&lt;/p&gt;
+
+&lt;p&gt;Finally, at the end of your post, you signal the creation of the list of references by using the Liquid tag&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;bibliography&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;cited&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…so I’ll put that at the very bottom of this file.  (Currently that’ll generate an error, because we haven’t enabled jekyll-scholar yet, but we’ll do that next.)   The optional argument &lt;code class=&quot;highlighter-rouge&quot;&gt;--cited&lt;/code&gt; means it’ll only list the references cited in your post.&lt;/p&gt;
+
+&lt;h2 id=&quot;enabling-jekyll-scholar&quot;&gt;Enabling Jekyll-Scholar&lt;/h2&gt;
+
+&lt;p&gt;To enable jekyll-scholar, all we need to do is make the following two changes, and perhaps a third.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, add “&lt;code class=&quot;highlighter-rouge&quot;&gt; - jekyll-scholar&lt;/code&gt;” to the list of &lt;code class=&quot;highlighter-rouge&quot;&gt;plugins:&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; to include &lt;code class=&quot;highlighter-rouge&quot;&gt;gem 'jekyll-scholar'&lt;/code&gt; where the other plugins are listed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Optional: The default citation format is “apa”.  If you want to change that, you can add the following to your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file:&lt;/p&gt;
+
+    &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;scholar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;…naming one of the styles in the &lt;a href=&quot;https://github.com/citation-style-language/styles&quot;&gt;CSL style repository&lt;/a&gt; (but leaving off the &lt;code class=&quot;highlighter-rouge&quot;&gt;.csl&lt;/code&gt; ending).  Tip from the CSL maintainers:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;To quickly search the styles in the GitHub &lt;a href=&quot;https://github.com/citation-style-language/styles&quot;&gt;CSL style repository&lt;/a&gt; by file name, press “t” to activate GitHub’s &lt;a href=&quot;https://github.com/blog/793-introducing-the-file-finder&quot;&gt;File Finder&lt;/a&gt; and start typing.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;Note however that the &lt;code class=&quot;highlighter-rouge&quot;&gt;csl-styles&lt;/code&gt; Gem package used by jekyll-scholar &lt;strong&gt;lags behind the official CSL style repository&lt;/strong&gt;, so some names you choose may not work.  In that case, you can supply a CSL file yourself.  For this demo, I found the file &lt;code class=&quot;highlighter-rouge&quot;&gt;physical-review-d.csl&lt;/code&gt;, added it to my main blog directory, and then specified the style name &lt;code class=&quot;highlighter-rouge&quot;&gt;physical-review-d&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;.  This produced the bracketed-number citation markers above, and the reference format you see below in the References section.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The convenience of this BibTeX/jekyll-scholar approach is that instead of having to manually edit references on each individual page – say, if you wanted to change citation formats (or alternatively, update information about a paper  cited in multiple posts) – now you only change &lt;strong&gt;one line&lt;/strong&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; (or update one spot in &lt;code class=&quot;highlighter-rouge&quot;&gt;references.bib&lt;/code&gt;) and the system “builds out” the change “everywhere.”&lt;/p&gt;
+
+&lt;p&gt;Happy blogging!&lt;/p&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;signaltrain&quot;&gt;[1]S. H. Hawley, B. Colburn, and S. I. Mimilakis, in &lt;i&gt;Audio Engineering Society Convention 147&lt;/i&gt; (2019).&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;billy_signaltrain2&quot;&gt;[2]W. Mitchell and S. H. Hawley, ArXiv &lt;b&gt;abs/2006.05584&lt;/b&gt;, (2020).&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;</content><author><name></name></author><summary type="html">Link to newer version of this document.</summary></entry><entry><title type="html">BibTeX Check for Jupyter</title><link href="https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html" rel="alternate" type="text/html" title="BibTeX Check for Jupyter" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter</id><content type="html" xml:base="https://drscotthawley.github.io/devblog4/jupyter/2020/07/01/BibTeX-Check-For-Jupyter.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
