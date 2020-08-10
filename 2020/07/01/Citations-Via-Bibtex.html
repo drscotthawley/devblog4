@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary" /><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Citations in Fastpages via BibTeX and jekyll-scholar | fastpages</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.0.1" />
 <meta property="og:title" content="Citations in Fastpages via BibTeX and jekyll-scholar" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Supporting scholarly blogging by drawing references from your database." />
@@ -16,11 +16,11 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-01T00:00:00-05:00" />
 <script type="application/ld+json">
-{"headline":"Citations in Fastpages via BibTeX and jekyll-scholar","dateModified":"2020-07-01T00:00:00-05:00","datePublished":"2020-07-01T00:00:00-05:00","description":"Supporting scholarly blogging by drawing references from your database.","mainEntityOfPage":{"@type":"WebPage","@id":"https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html"},"@type":"BlogPosting","url":"https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html","@context":"https://schema.org"}</script>
+{"dateModified":"2020-07-01T00:00:00-05:00","datePublished":"2020-07-01T00:00:00-05:00","description":"Supporting scholarly blogging by drawing references from your database.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html"},"url":"https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html","headline":"Citations in Fastpages via BibTeX and jekyll-scholar","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/devblog4/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://drscotthawley.github.io/devblog4/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/devblog4/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Citations in Fastpages via BibTeX and jekyll-scholar | fastpages</title>
-<meta name="generator" content="Jekyll v4.0.0" />
+<meta name="generator" content="Jekyll v4.0.1" />
 <meta property="og:title" content="Citations in Fastpages via BibTeX and jekyll-scholar" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Supporting scholarly blogging by drawing references from your database." />
@@ -31,7 +31,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-01T00:00:00-05:00" />
 <script type="application/ld+json">
-{"headline":"Citations in Fastpages via BibTeX and jekyll-scholar","dateModified":"2020-07-01T00:00:00-05:00","datePublished":"2020-07-01T00:00:00-05:00","description":"Supporting scholarly blogging by drawing references from your database.","mainEntityOfPage":{"@type":"WebPage","@id":"https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html"},"@type":"BlogPosting","url":"https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html","@context":"https://schema.org"}</script>
+{"dateModified":"2020-07-01T00:00:00-05:00","datePublished":"2020-07-01T00:00:00-05:00","description":"Supporting scholarly blogging by drawing references from your database.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html"},"url":"https://drscotthawley.github.io/devblog4/2020/07/01/Citations-Via-Bibtex.html","headline":"Citations in Fastpages via BibTeX and jekyll-scholar","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -126,24 +126,24 @@ window.onload = wrap_img;
 
 <p>In the main blog directory, create a new directory called <code class="highlighter-rouge">_bibliography/</code>, and place your BibTeX file there as <a href="../_bibliography/references.bib">references.bib</a>.  In the case of this demo, the references file looks like this:</p>
 
-<pre><code class="language-bibtex">@conference{signaltrain,
-  title = {Profiling Audio Compressors with Deep Neural Networks},
-  author = {Hawley, Scott H. and Colburn, Benjamin and Mimilakis, Stylianos Ioannis},
-  booktitle = {Audio Engineering Society Convention 147},
-  month = {Oct},
-  year = {2019},
-  url = {http://www.aes.org/e-lib/browse.cfm?elib=20595}
-}               
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@conference</span><span class="p">{</span><span class="nl">signaltrain</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Profiling Audio Compressors with Deep Neural Networks}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Hawley, Scott H. and Colburn, Benjamin and Mimilakis, Stylianos Ioannis}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Audio Engineering Society Convention 147}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="s">{Oct}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{http://www.aes.org/e-lib/browse.cfm?elib=20595}</span>
+<span class="p">}</span>               
 
-@article{billy_signaltrain2,
-  title={Exploring Quality and Generalizability in Parameterized Neural Audio Effects},
-  author={William Mitchell and Scott H. Hawley},
-  journal={ArXiv},  
-  year={2020},
-  volume={abs/2006.05584}
-  url = {https://arxiv.org/abs/2006.05584}
-}
-</code></pre>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">billy_signaltrain2</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">{Exploring Quality and Generalizability in Parameterized Neural Audio Effects}</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">{William Mitchell and Scott H. Hawley}</span><span class="p">,</span>
+  <span class="na">journal</span><span class="p">=</span><span class="s">{ArXiv}</span><span class="p">,</span>  
+  <span class="na">year</span><span class="p">=</span><span class="s">{2020}</span><span class="p">,</span>
+  <span class="na">volume</span><span class="p">=</span><span class="s">{abs/2006.05584}</span>
+  <span class="nv">url</span> <span class="err">=</span> <span class="err">{https://arxiv.org/abs/2006.05584</span><span class="p">}</span>
+<span class="c">}</span>
+</code></pre></div></div>
 
 <p>Note that this  (single) references file is for your entire blog. The great thing about this is that all your Jupyter notebooks and Markdown posts will draw from this same file, which could be hundreds of references long, and jekyll-scholar will only include the ones you need for each post.</p>
 
